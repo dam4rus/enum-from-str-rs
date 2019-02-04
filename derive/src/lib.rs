@@ -24,11 +24,9 @@ fn impl_enum_str_derive(ast: &syn::DeriveInput) -> TokenStream {
             let mut literal = None;
 
             for attr in &variant.attrs {
-                if let Some(meta) = attr.interpret_meta() {
-                    if let syn::Meta::NameValue(name_value) = meta {
-                        if let syn::Lit::Str(lit_str) = name_value.lit {
-                            literal = Some(lit_str.value());
-                        }
+                if let Some(syn::Meta::NameValue(name_value)) = attr.interpret_meta() {
+                    if let syn::Lit::Str(lit_str) = name_value.lit {
+                        literal = Some(lit_str.value());
                     }
                 }
             }
