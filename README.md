@@ -19,3 +19,6 @@ enum SomeEnum {
 "foo".parse::<SomeEnum>().unwrap();
 "Bar".parse::<SomeEnum>().unwrap();
 ```
+
+## Known issues
+Currently, proc-macro crates doesn't allow exporting anything other than the proc-macro function. That's why ParseEnumVariantError is in a different crate. When Rust allows it, it should be moved into a single crate.
