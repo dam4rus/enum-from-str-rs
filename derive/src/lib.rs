@@ -12,8 +12,8 @@ pub fn enum_str_derive(input: TokenStream) -> TokenStream {
     impl_enum_str_derive(&ast)
 }
 
-struct Variant {
-    pub name: syn::Ident,
+struct Variant<'a> {
+    pub name: &'a syn::Ident,
     pub literal: String,
 }
 
@@ -32,8 +32,8 @@ fn impl_enum_str_derive(ast: &syn::DeriveInput) -> TokenStream {
             }
 
             match literal {
-                Some(l) => variants.push(Variant { name: variant.ident.clone(), literal: l}),
-                None => variants.push(Variant { name: variant.ident.clone(), literal: variant.ident.to_string() }),
+                Some(l) => variants.push(Variant { name: &variant.ident, literal: l}),
+                None => variants.push(Variant { name: &variant.ident, literal: variant.ident.to_string() }),
             }
         }
     }
