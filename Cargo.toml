@@ -1,0 +1,8 @@
+[package]
+name = "enum_from_str"
+version = "0.1.0"
+authors = ["Kalmár Róbert <rfrostkalmar@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+enum_from_str_derive = { path = "./derive" }

@@ -1,0 +1,12 @@
+[lib]
+proc-macro = true
+
+[package]
+name = "enum_from_str_derive"
+version = "0.1.0"
+authors = ["Kalmár Róbert <kalmar.robert@zengo.eu>"]
+edition = "2018"
+
+[dependencies]
+syn = "0.14.4"
+quote = "0.6.3"
