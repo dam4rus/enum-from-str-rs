@@ -6,6 +6,12 @@ name = "enum_from_str_derive"
 version = "0.1.0"
 authors = ["Kalmár Róbert <kalmar.robert@zengo.eu>"]
 edition = "2018"
+description = "Enable deriving FromStr for enums"
+keywords = ["proc", "macro", "derive", "enum", "fromstr"]
+license = "MIT"
+repository = "https://github.com/dam4rus/enum-from-str-rs.git"
+homepage = "https://github.com/dam4rus/enum-from-str-rs"
+readme = "../README.md"
 
 [dependencies]
 syn = "0.14.4"
