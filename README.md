@@ -16,8 +16,10 @@ enum SomeEnum {
     Bar, // equals to #[from_str="Bar"]
 }
 
-"foo".parse::<SomeEnum>().unwrap();
-"Bar".parse::<SomeEnum>().unwrap();
+fn example() {
+    "foo".parse::<SomeEnum>().unwrap();
+    "Bar".parse::<SomeEnum>().unwrap();
+}
 ```
 
 ## Known issues
